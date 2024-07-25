@@ -49,32 +49,6 @@ class MainActivity : AppCompatActivity() {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
                 val value = dataSnapshot.getValue<String>()
                 val op:Double= value?.toDouble()!!
-//                var perc=((op/22.0)*100).roundToInt()
-//                //perc=100-perc
-//                if(perc>100) {
-//                    dist.text="Dustbin Empty"
-//                    perc=0
-//                    progressBar.progress = perc
-//                }
-//
-//                else if(perc<0){
-//                    dist.text="Dustbin Full"
-//                    perc=100
-//                    progressBar.progress = perc
-//                }
-//
-//                else {
-//                    dist.text=perc.toString()+"%"
-//                    progressBar.progress = perc
-//                    val progressDrawable: Drawable = if (perc > 75) {
-//                        ContextCompat.getDrawable(baseContext, R.drawable.progress_bar_style)!!
-//                    } else {
-//                        ContextCompat.getDrawable(baseContext, R.drawable.progress_bar_green)!!
-//                    }
-//                    progressBar.progressDrawable = progressDrawable
-//                }
-
-
                 if(op>=50) {
                     bg.setBackgroundColor(resources.getColor(R.color.green))
                     horn.visibility=View.GONE
